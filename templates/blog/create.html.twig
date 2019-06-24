@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+
+
+
+{{ form_start(formArticle) }}
+{{ form_widget(formArticle) }}
+{{ form_row(formArticle.category) }}
+
+
+<button type="submit" class="btn btn-dark">
+{% if editMode %}
+Modifier
+{% else %}
+Ajouter
+{% endif %}
+</button>
+
+{{ form_end(formArticle) }}
+
+<h1>test</h1>
+
+
+{% endblock %}
